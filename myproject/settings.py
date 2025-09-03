@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-jm7j7parhp@b$z(=-g*hx+75n0)(wig8qo=l!a^l*^#csa5b4g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["http://127.0.0.1:8000", "http://localhost:8000", "necta-backend.onrender.com"]
 
 
 # Application definition
@@ -62,12 +62,11 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20
 }
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development only
-# Or configure specific origins:
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:3000",
-# ]
+
+CORS_ALLOWED_ORIGINS = [
+     "http://localhost:5173",
+     "http://127.0.0.1:5173",
+     "https://nectaV2-ranking.onrender.com",]
 
 ROOT_URLCONF = 'myproject.urls'
 
